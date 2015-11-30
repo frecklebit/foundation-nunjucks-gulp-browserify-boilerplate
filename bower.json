@@ -1,0 +1,29 @@
+{
+  "name": "website-gulp-browserify-boilerplate",
+  "description": "Boilerplate using SASS, Gulp, and Browserify that also utilizes best practices.",
+  "main": "",
+  "authors": [
+    "Adam Cole Jenkins <adamcole83@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "express",
+    "gulp",
+    "browserify",
+    "sass",
+    "scss",
+    "karma",
+    "jasmine",
+    "protractor",
+    "boilerplate"
+  ],
+  "homepage": "https://github.com/adamcolejenkins/website-gulp-browserify-boilerplate",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
