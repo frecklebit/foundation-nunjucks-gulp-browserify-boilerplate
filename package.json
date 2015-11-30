@@ -1,0 +1,70 @@
+{
+  "name": "website-gulp-browserify-boilerplate",
+  "description": "Boilerplate using SASS, Gulp, and Browserify that also utilizes best practices.",
+  "author": "Adam Cole Jenkins <adamcole83@gmail.com>",
+  "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "https://github.com/adamcolejenkins/website-gulp-browserify-boilerplate#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamcolejenkins/website-gulp-browserify-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adamcolejenkins/website-gulp-browserify-boilerplate/issues"
+  },
+  "keywords": [
+    "express",
+    "gulp",
+    "browserify",
+    "sass",
+    "scss",
+    "karma",
+    "jasmine",
+    "protractor",
+    "boilerplate"
+  ],
+  "private": true,
+  "engines": {
+    "node": ">=0.12.x"
+  },
+  "scripts": {
+    "pretest": "npm install",
+    "test": "karma start test/karma.conf.js"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "browserify": "^12.0.1",
+    "bulk-require": "^0.2.1",
+    "bulkify": "^1.1.1",
+    "debowerify": "^1.3.1",
+    "del": "^2.1.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-changed": "^1.3.0",
+    "gulp-gzip": "^1.2.0",
+    "gulp-if": "^2.0.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^1.5.1",
+    "gulp-util": "^3.0.7",
+    "imagemin-pngcrush": "^4.1.0",
+    "jshint-stylish": "^2.1.0",
+    "karma": "^0.13.15",
+    "karma-browserify": "^4.4.1",
+    "karma-jasmine": "^0.3.6",
+    "pretty-hrtime": "^1.0.1",
+    "protractor": "^3.0.0",
+    "run-sequence": "^1.1.5",
+    "showdown": "^1.3.0",
+    "tiny-lr": "^0.2.1",
+    "uglifyify": "^3.0.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.6.1"
+  }
+}
