@@ -1,6 +1,7 @@
 'use strict';
 
 import config         from '../config';
+import changed        from 'gulp-changed';
 import gulp           from 'gulp';
 import handlebars     from 'gulp-compile-handlebars';
 import inject         from 'gulp-inject';
@@ -16,6 +17,9 @@ gulp.task( 'views', function () {
   };
   
   return gulp.src( config.views.src )
+  
+    // Ignore unchanged files
+    .pipe( changed( config.views.dest ) )
     
     // Compile handlebar templates
     .pipe( handlebars( templateData, config.handlebars ) )
