@@ -1,6 +1,12 @@
 'use strict';
 
 export default {
+  
+  site: {
+    title: "",
+    description: "",
+    keywords: ""
+  },
 
   browserPort: 3000,
   UIPort: 3001,
@@ -48,6 +54,13 @@ export default {
     src: 'src/*.html',
     dest: 'build'
   },
+  
+  handlebars: {
+    batch: ['./src/partials/'],
+    helpers: {
+      
+    }
+  },
 
   gzip: {
     src: 'build/**/*.{html,xml,json,css,js,js.map,css.map}',
@@ -74,7 +87,7 @@ export default {
       pass: ''
     }
     
-  }
+  },
 
   init: function() {
     return this;
