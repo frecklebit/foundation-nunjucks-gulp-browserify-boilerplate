@@ -1,6 +1,6 @@
-# Website Boilerplate
+# Website Boilerplate using SASS, Gulp, Browserify with AWS S3 or SFTP Deployment.
 
-A boilerplate modeled after [Jake Marsh's Angular Boilerplate](https://github.com/jakemmarsh/angularjs-gulp-browserify-boilerplate) using SASS, Gulp, and Browserify that also utilizes Gulp [best practices](https://github.com/greypants/gulp-starter).
+A boilerplate modeled after [Jake Marsh's Angular Boilerplate](https://github.com/jakemmarsh/angularjs-gulp-browserify-boilerplate) using SASS, Gulp, and Browserify that also utilizes Gulp [best practices](https://github.com/greypants/gulp-starter). This boilerplate also has a deploy task for pushing your production-ready site to Amazon AWS S3 or an SFTP server.
 
 ## Getting up and running
 
