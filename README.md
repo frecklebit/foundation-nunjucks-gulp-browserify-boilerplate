@@ -92,6 +92,8 @@ Just as there is `gulp prod` there is also a `gulp deploy` task for pushing your
 
 **Reminder:** `awsS3.bucket` or `sftp.host` need to be `false` if you are not using them.
 
+---
+
 ##### Known Issues:
 
 - (1.0.1) Inject not working on `gulp dev`, workaround: save index.html
