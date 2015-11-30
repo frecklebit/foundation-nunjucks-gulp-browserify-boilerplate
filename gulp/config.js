@@ -59,11 +59,22 @@ export default {
     bundleName: 'main.js',
     prodSourcemap: false
   },
-
-  test: {
-    karma: 'test/karma.conf.js',
-    protractor: 'test/protractor.conf.js'
-  },
+  
+  deploy: {
+    
+    awsS3: {
+      bucket: false,
+      key: '',
+      secret: ''
+    },
+    
+    sftp: {
+      host: false,
+      user: '',
+      pass: ''
+    }
+    
+  }
 
   init: function() {
     return this;

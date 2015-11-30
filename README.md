@@ -52,7 +52,7 @@ A number of build processes are automatically run on all of our Javascript files
 - **Browserify:** The main build process run on any Javascript files. This processes any of the `require('module')` statements, compiling the files as necessary.
 - **Babelify:** This uses [babelJS](https://babeljs.io/) to provide support for ES6+ features.
 - **Debowerify:** Parses `require()` statements in your code, mapping them to `bower_components` when necessary. This allows you to use and include bower components just as you would npm modules.
-- **Uglifyify:** This will minify the file created by Browserify and ngAnnotate.
+- **Uglifyify:** This will minify the file created by Browserify.
 
 The resulting file (`main.js`) is placed inside the directory `/build/js/`.
 
@@ -74,4 +74,18 @@ HTML files inside `/src/` will simply be copied to the `/build/` directory witho
 
 All of the Gulp processes mentioned above are run automatically when any of the corresponding files in the `/src` directory are changed, and this is thanks to our Gulp watch tasks. Running `gulp dev` will begin watching all of these files, while also serving to `localhost:3002`, and with browser-sync proxy running at `localhost:3000` (by default).
 
+##### Production Task
 
+Just as there is the `gulp dev` task for development, there is also a `gulp prod` task for putting your project into a production-ready state. This will run each of the tasks, while also adding the image minification task discussed above. There is also an empty `gulp deploy` task that is included when running the production task. This deploy task can be fleshed out to automatically push your production-ready site to your hosting setup.
+
+**Reminder:** When running the production task, gulp will not fire up the express server and serve your index.html. This task is designed to be run before the `deploy` step that may copy the files from `/build` to a production web server.
+
+##### Pre-compressing text assets
+
+When running with `gulp prod`, a pre-compressed file is generated in addition to uncompressed file (.html.gz, .js.gz, css.gz). This is done to enable web servers serve compressed content without having to compress it on the fly. Pre-compression is handled by `gzip` task.
+
+##### Deploy Task
+
+Just as there is `gulp prod` there is also a `gulp deploy` task for pushing your production-ready site to Amazon AWS S3 or a SFTP server. Set your S3 or SFTP credentials in `gulp/config.js`.
+
+**Reminder:** `awsS3.bucket` or `sftp.host` need to be `false` if you are not using them.
