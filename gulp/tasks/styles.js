@@ -5,9 +5,11 @@ import gulp         from 'gulp';
 import gulpif       from 'gulp-if';
 import sourcemaps   from 'gulp-sourcemaps';
 import sass         from 'gulp-sass';
+import header       from 'gulp-header';
 import handleErrors from '../util/handleErrors';
 import browserSync  from 'browser-sync';
 import autoprefixer from 'gulp-autoprefixer';
+import pkg          from '../../package.json';
 
 gulp.task('styles', function () {
   
@@ -36,6 +38,11 @@ gulp.task('styles', function () {
       createSourcemap,
       sourcemaps.write( global.isProd ? './' : null )
     ))
+    
+    // Prepend Banner to dest file
+    .pipe( header( config.banner, {
+      package: pkg
+    }))
     
     // Write the destination css
     .pipe( gulp.dest( config.styles.dest ) )
