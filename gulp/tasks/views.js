@@ -3,20 +3,28 @@
 import config         from '../config';
 import changed        from 'gulp-changed';
 import gulp           from 'gulp';
-import handlebars     from 'gulp-compile-handlebars';
+import nunjucksRender from 'gulp-nunjucks-render';
+import data       from 'gulp-data';
 import inject         from 'gulp-inject';
 import handleErrors   from '../util/handleErrors';
 import browserSync    from 'browser-sync';
 
 gulp.task( 'views', function () {
   
+  nunjucksRender.nunjucks.configure( config.views.templates );
+  
   return gulp.src( config.views.src )
   
     // Ignore unchanged files
     .pipe( changed( config.views.dest ) )
     
-    // Compile handlebar templates
-    .pipe( handlebars( config.site, config.handlebars ) )
+    // Add data to Nunjucks templates
+    .pipe( data( function () {
+      return require( '../../' + config.views.data );
+    }))
+    
+    // Render Nunjucks templates
+    .pipe( nunjucksRender() )
     
     // Inject source files
     .pipe( inject( gulp.src( [config.styles.dest + '/*.css', config.scripts.dest + '/*.js'], { read: false } ), { relative: true }))

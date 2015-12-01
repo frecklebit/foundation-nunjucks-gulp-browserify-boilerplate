@@ -1,14 +1,8 @@
 'use strict';
 
-import pkg from '../package.json'
+import pkg from '../package.json';
 
 export default {
-  
-  site: {
-    title: pkg.title,
-    description: pkg.description,
-    keywords: pkg.keywords.join(", ")
-  },
 
   browserPort: 3000,
   UIPort: 3001,
@@ -53,15 +47,10 @@ export default {
   ],
   
   views: {
-    src: 'src/*.html',
-    dest: 'build'
-  },
-  
-  handlebars: {
-    batch: ['./src/partials/'],
-    helpers: {
-      
-    }
+    src: 'src/*.+(html|nunjucks)',
+    dest: 'build',
+    templates: ['src/templates/'],
+    data: 'src/data.js'
   },
   
   banner: [
