@@ -20,6 +20,25 @@
 		<!-- Styles -->
 		<link rel="stylesheet" href="css/main.css">
 		
-		
+		{% block header %}{% endblock %}
 	</head>
 	<body>
+  	
+  	<header role="banner">
+    	{% include "partials/header.html" %}
+  	</header><!--/ header -->
+  	
+  	<main role="main">
+    	{% block content %} {% endblock %}
+  	</main><!--/ main -->
+  	
+  	<footer role="contentinfo">
+    	{% include "partials/footer.html" %}
+  	</footer><!--/ footer -->
+  	
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    
+    {% block footer %}{% endblock %}
+	</body>
+</html>
