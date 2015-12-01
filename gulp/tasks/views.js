@@ -13,7 +13,7 @@ gulp.task( 'views', function () {
   return gulp.src( config.views.src )
   
     // Ignore unchanged files
-//     .pipe( changed( config.views.dest ) )
+    .pipe( changed( config.views.dest ) )
     
     // Compile handlebar templates
     .pipe( handlebars( config.site, config.handlebars ) )
