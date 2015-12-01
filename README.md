@@ -1,6 +1,6 @@
-# Handlebars, SASS, Gulp, Browserify website boilerplate with AWS S3 and/or SFTP Deployment.
+# Zurb Foundation, Nunjucks, SASS, Gulp, Browserify website boilerplate with AWS S3 and/or SFTP Deployment.
 
-A boilerplate modeled after [Jake Marsh's Angular Boilerplate](https://github.com/jakemmarsh/angularjs-gulp-browserify-boilerplate) using Handlebars, SASS, Gulp, and Browserify that also utilizes Gulp [best practices](https://github.com/greypants/gulp-starter). This boilerplate also has a deploy task for pushing your production-ready site to Amazon AWS S3 or an SFTP server.
+A boilerplate modeled after [Jake Marsh's Angular Boilerplate](https://github.com/jakemmarsh/angularjs-gulp-browserify-boilerplate) using Zurb Foundation, Nunjucks, SASS, Gulp, and Browserify that also utilizes Gulp [best practices](https://github.com/greypants/gulp-starter). This boilerplate also has a deploy task for pushing your production-ready site to Amazon AWS S3 or an SFTP server.
 
 ## Getting up and running
 
@@ -17,7 +17,8 @@ Now that `gulp dev` is running, the server is up as well and serving files from 
 This boilerplate uses the latest versions of the following libraries:
 
 - [Babel](https://babeljs.io)
-- [Handlebars](http://handlebarsjs.com)
+- [Nunjucks](https://mozilla.github.io/nunjucks/)
+- [Zurb Foundation](http://foundation.zurb.com)
 - [SASS](http://sass-lang.com/)
 - [Gulp](http://gulpjs.com/)
 - [Browserify](http://browserify.org/)
