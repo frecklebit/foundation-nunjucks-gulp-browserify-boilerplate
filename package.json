@@ -59,6 +59,7 @@
     "gulp-inject": "^3.0.0",
     "gulp-jshint": "^2.0.0",
     "gulp-notify": "^2.0.0",
+    "gulp-nunjucks-render": "^1.0.0",
     "gulp-protractor": "^1.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-s3-deploy": "^1.0.1",
