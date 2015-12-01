@@ -1,7 +1,6 @@
 'use strict';
 
 import config         from '../config';
-import changed        from 'gulp-changed';
 import gulp           from 'gulp';
 import nunjucksRender from 'gulp-nunjucks-render';
 import data       from 'gulp-data';
@@ -14,9 +13,6 @@ gulp.task( 'views', function () {
   nunjucksRender.nunjucks.configure( config.views.templates );
   
   return gulp.src( config.views.src )
-  
-    // Ignore unchanged files
-    .pipe( changed( config.views.dest ) )
     
     // Add data to Nunjucks templates
     .pipe( data( function () {
@@ -25,9 +21,6 @@ gulp.task( 'views', function () {
     
     // Render Nunjucks templates
     .pipe( nunjucksRender() )
-    
-    // Inject source files
-    .pipe( inject( gulp.src( [config.styles.dest + '/*.css', config.scripts.dest + '/*.js'], { read: false } ), { relative: true }))
     
     // Display any errors
     .on( 'error', handleErrors )

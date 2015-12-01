@@ -50,6 +50,7 @@ export default {
     src: 'src/*.+(html|nunjucks)',
     dest: 'build',
     templates: ['src/templates/'],
+    watch: 'src/**/*.+(html|nunjucks)',
     data: 'src/data.js'
   },
   
