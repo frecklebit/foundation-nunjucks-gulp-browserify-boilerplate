@@ -11,7 +11,6 @@ import $          from 'jquery';
 // 
 
 import foundation from 'foundation-sites';
-// import bootstrap from 'bootstrap';
 
 //
 // Main Script
@@ -28,7 +27,6 @@ import foundation from 'foundation-sites';
     init : function () {
       
       // Bootstrap Foundation
-      // Twitter Bootstrap doesn't require bootstrapping
       $(document).foundation();
       
       // Your code...
