@@ -10,28 +10,19 @@ import browserSync    from 'browser-sync';
 
 gulp.task( 'views', function () {
   
-  const templateData = {
-    title:        config.site.title,
-    description:  config.site.description,
-    keywords:     config.site.keywords
-  };
-  
   return gulp.src( config.views.src )
   
     // Ignore unchanged files
-    .pipe( changed( config.views.dest ) )
+//     .pipe( changed( config.views.dest ) )
     
     // Compile handlebar templates
-    .pipe( handlebars( templateData, config.handlebars ) )
-    
-    // Display any errors
-    .on( 'error', handleErrors )
-    
-    // Write to destination
-    .pipe( gulp.dest( config.views.dest ) )
+    .pipe( handlebars( config.site, config.handlebars ) )
     
     // Inject source files
     .pipe( inject( gulp.src( [config.styles.dest + '/*.css', config.scripts.dest + '/*.js'], { read: false } ), { relative: true }))
+    
+    // Display any errors
+    .on( 'error', handleErrors )
     
     // Write to destination
     .pipe( gulp.dest( config.views.dest ) )

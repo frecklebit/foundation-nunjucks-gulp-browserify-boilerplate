@@ -1,11 +1,13 @@
 'use strict';
 
+import pkg from '../package.json'
+
 export default {
   
   site: {
-    title: "",
-    description: "",
-    keywords: ""
+    title: pkg.title,
+    description: pkg.description,
+    keywords: pkg.keywords.join(", ")
   },
 
   browserPort: 3000,

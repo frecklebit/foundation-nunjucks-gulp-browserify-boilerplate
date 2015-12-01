@@ -26,5 +26,8 @@
     "test",
     "tests"
   ],
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "jquery": "~2.1.4"
+  }
 }
