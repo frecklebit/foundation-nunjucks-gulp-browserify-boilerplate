@@ -41,7 +41,7 @@ gulp.task('styles', function () {
     
     // Prepend Banner to dest file
     .pipe( header( config.banner, {
-      package: pkg
+      pkg : pkg
     }))
     
     // Write the destination css

@@ -63,16 +63,15 @@ export default {
   },
   
   banner: [
-    '/*!\n' +
-    ' * <%= package.title %>\n' +
-    ' * <%= package.description %>\n' +
-    ' * <%= package.url %>\n' +
-    ' * @author <%= package.author %>\n' +
-    ' * @version <%= package.version %>\n' +
-    ' * Copyright ' + new Date().getFullYear() + '. <%= package.license %> licensed.\n' +
-    ' */' +
-    '\n'
-  ],
+    '/*!',
+    ' * <%= pkg.name %>',
+    ' * <%= pkg.description %>',
+    ' * @author <%= pkg.author %>',
+    ' * @version <%= pkg.version %>',
+    ' * @link <%= pkg.homepage %>',
+    ' * Copyright ' + new Date().getFullYear() + '. <%= pkg.license %> licensed.',
+    ' */\n'
+  ].join('\n'),
 
   gzip: {
     src: 'build/**/*.{html,xml,json,css,js,js.map,css.map}',

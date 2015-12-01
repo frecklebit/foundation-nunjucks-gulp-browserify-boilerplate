@@ -70,7 +70,7 @@ function buildScript(file) {
       // Write source maps
       .pipe( gulpif( createSourcemap, sourcemaps.write('./') ) )
       
-      // Store main
+      // Write the destination
       .pipe( gulp.dest( config.scripts.dest ) )
       
       // Reload browser once
